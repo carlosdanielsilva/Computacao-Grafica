@@ -1,0 +1,130 @@
+\doxysection{vec4.\+h}
+\hypertarget{vec4_8h_source}{}\label{vec4_8h_source}\mbox{\hyperlink{vec4_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ VEC4\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ VEC4\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }std::sqrt;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvec4}{vec4}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[4];}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Construtor\ padrão:\ inicializa\ um\ vetor\ com\ todos\ elementos\ sendo\ zero.}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}{vec4}}()\ :\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}\{0,\ 0,\ 0,\ 0\}\ \{\};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Construtor\ que\ inicializa\ um\ vetor\ com\ os\ valores\ passados\ como\ parâmetro.}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classvec4_aab75403b358eade4f3fd059819858b96}{vec4}}(\textcolor{keywordtype}{double}\ e0,\ \textcolor{keywordtype}{double}\ e1,\ \textcolor{keywordtype}{double}\ e2,\ \textcolor{keywordtype}{double}\ e3)\ :\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}\{e0,\ e1,\ e2,\ e3\}\ \{\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_a25d847358270626b627d4a61923f3cbe}{x}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0];\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_adce71e1986b04f4245efcf6e3e84ef59}{y}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1];\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_af155ae027f00d8ac0663d0fe10fe5dd8}{z}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2];\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_a143f8f4b5ef372195a2eb20b91958cf4}{w}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{classvec4_ad70d259308c10779ca37fa100084e33b}{operator-\/}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}{vec4}}(-\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0],\ -\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1],\ -\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2],\ -\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]);\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_acacb6da88d4a0c92d585ee7c61658acf}{operator[]}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[i];\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ \&\mbox{\hyperlink{classvec4_afc5b954c340a9f40be2f181dcc7f07cc}{operator[]}}(\textcolor{keywordtype}{int}\ i)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[i];\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Adiciona\ um\ vetor\ ao\ atual}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classvec4}{vec4}}\ \&\mbox{\hyperlink{classvec4_a16d10f2ed44304fb1309f959f245ca52}{operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v)}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Multiplica\ o\ vetor\ atual\ por\ um\ escalar}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classvec4}{vec4}}\ \&\mbox{\hyperlink{classvec4_aa94397f407157c06f6d82e4667b2b169}{operator*=}}(\textcolor{keywordtype}{double}\ t)}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ *=\ t;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ *=\ t;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ *=\ t;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ *=\ t;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Divide\ o\ vetor\ atual\ por\ um\ escalar}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classvec4}{vec4}}\ \&\mbox{\hyperlink{classvec4_a14bd8aee70c80e5ca0bc019a4e86c797}{operator/=}}(\textcolor{keywordtype}{double}\ t)}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this}\ *=\ 1\ /\ t;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Retorna\ o\ comprimento\ (magnitude)\ do\ vetor}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_a55e485d22f9ee137f383304b962489b1}{length}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sqrt(\mbox{\hyperlink{classvec4_a73437e8e0ec221f1d6587f871848320d}{length\_squared}}());}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Retorna\ o\ quadrado\ do\ comprimento\ (magnitude)\ do\ vetor}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvec4_a73437e8e0ec221f1d6587f871848320d}{length\_squared}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00069\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ +\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ +\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ +\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classvec4}{point4}}\ =\ \mbox{\hyperlink{classvec4}{vec4}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{//\ Sobrecarga\ do\ operador\ de\ saída\ para\ exibição\ de\ vetores}}
+\DoxyCodeLine{00077\ \textcolor{keyword}{inline}\ std::ostream\ \&\mbox{\hyperlink{vec4_8h_aa4917947434c379c90a36856daf82301}{operator<<}}(std::ostream\ \&out,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v)}
+\DoxyCodeLine{00078\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ out\ <<\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ <<\ \textcolor{charliteral}{'\ '}\ <<\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ <<\ \textcolor{charliteral}{'\ '}\ <<\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ <<\ \textcolor{charliteral}{'\ '}\ <<\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ Retorna\ a\ soma\ de\ dois\ vetores.}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_ae2a92747686ab17e4c43cf8cf781032d}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&u,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v)}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4}{vec4}}(u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ +\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ +\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ +\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ +\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]);}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{//\ Retorna\ a\ diferença\ entre\ dois\ vetores.}}
+\DoxyCodeLine{00089\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_afef31447aaef5c1ce7c490f65bd0249b}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&u,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v)}
+\DoxyCodeLine{00090\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4}{vec4}}(u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ -\/\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ -\/\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ -\/\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ -\/\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]);}
+\DoxyCodeLine{00092\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ Retorna\ o\ produto\ elemento-\/a-\/elemento\ de\ dois\ vetores.}}
+\DoxyCodeLine{00095\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_a995fb67be372cc9aac33aa0eecf7fd79}{operator*}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&u,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v)}
+\DoxyCodeLine{00096\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4}{vec4}}(u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2],\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]);}
+\DoxyCodeLine{00098\ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ Retorna\ um\ vetor\ multiplicado\ por\ um\ escalar.}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_a995fb67be372cc9aac33aa0eecf7fd79}{operator*}}(\textcolor{keywordtype}{double}\ t,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v)}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4}{vec4}}(t\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0],\ t\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1],\ t\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2],\ t\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]);}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ Retorna\ um\ vetor\ multiplicado\ por\ um\ escalar.}}
+\DoxyCodeLine{00108\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_a995fb67be372cc9aac33aa0eecf7fd79}{operator*}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\ \&v,\ \textcolor{keywordtype}{double}\ t)}
+\DoxyCodeLine{00109\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{return}\ t\ *\ v;}
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{//\ Retorna\ um\ vetor\ dividido\ por\ um\ escalar.}}
+\DoxyCodeLine{00114\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_a7fd0b1d372a5aed05656a09d2009a47a}{operator/}}(\mbox{\hyperlink{classvec4}{vec4}}\ v,\ \textcolor{keywordtype}{double}\ t)}
+\DoxyCodeLine{00115\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{return}\ (1\ /\ t)\ *\ v;}
+\DoxyCodeLine{00117\ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{comment}{//\ Calcula\ o\ produto\ escalar\ de\ dois\ vetores.}}
+\DoxyCodeLine{00120\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{vec4_8h_a117d6e83e8c144f9dac1b7c9ce8ba2b8}{dot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\&\ u,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classvec4}{vec4}}\&\ v)\ }
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ +\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ +\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ +\ u.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ *\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ Calcula\ o\ vetor\ unitário\ de\ um\ vetor}}
+\DoxyCodeLine{00126\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classvec4}{vec4}}\ \mbox{\hyperlink{vec4_8h_a8b26ba58f4ead980b659b34805d84eb2}{unit\_vector}}(\mbox{\hyperlink{classvec4}{vec4}}\ v)}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ v\ /\ v.\mbox{\hyperlink{classvec4_a55e485d22f9ee137f383304b962489b1}{length}}();}
+\DoxyCodeLine{00129\ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

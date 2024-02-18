@@ -1,0 +1,67 @@
+\doxysection{quadrado.\+cpp File Reference}
+\hypertarget{quadrado_8cpp}{}\label{quadrado_8cpp}\index{quadrado.cpp@{quadrado.cpp}}
+
+
+Essa classe realiza a criação de uma imagem com 3 quadrados.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$Magick++.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{quadrado_8cpp_a51a0c03e82a49c8df1aee64a078f33e7}{main}} (int, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Essa classe realiza a criação de uma imagem com 3 quadrados. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Daniel da Silva Pereira 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{quadrado_8cpp_a51a0c03e82a49c8df1aee64a078f33e7}\label{quadrado_8cpp_a51a0c03e82a49c8df1aee64a078f33e7} 
+\index{quadrado.cpp@{quadrado.cpp}!main@{main}}
+\index{main@{main}!quadrado.cpp@{quadrado.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ InitializeMagick(*argv);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Image\ image(Geometry(200,\ 200),\ Color(\textcolor{stringliteral}{"{}white"{}}));}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Quadrado\ externo}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ image.fillColor(\textcolor{stringliteral}{"{}black"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ image.draw(DrawableRectangle(10,\ 10,\ 190,\ 190));}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Quadrado\ intermediário}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ image.fillColor(\textcolor{stringliteral}{"{}blue"{}});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ image.draw(DrawableRectangle(30,\ 30,\ 170,\ 170));}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Quadrado\ interno}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ image.fillColor(\textcolor{stringliteral}{"{}red"{}});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ image.draw(DrawableRectangle(50,\ 50,\ 150,\ 150));}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ image.write(\textcolor{stringliteral}{"{}quadrados\_sobrepostos.png"{}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{catch}\ (exception\ \&error\_)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Caught\ exception:\ "{}}\ <<\ error\_.what()\ <<\ endl;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

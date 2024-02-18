@@ -1,0 +1,63 @@
+\doxysection{circulo.\+cpp File Reference}
+\hypertarget{circulo_8cpp}{}\label{circulo_8cpp}\index{circulo.cpp@{circulo.cpp}}
+
+
+Essa classe realiza a criação de uma imagem com 2 círculos.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$Magick++.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{circulo_8cpp_a51a0c03e82a49c8df1aee64a078f33e7}{main}} (int, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Essa classe realiza a criação de uma imagem com 2 círculos. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Daniel da Silva Pereira 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{circulo_8cpp_a51a0c03e82a49c8df1aee64a078f33e7}\label{circulo_8cpp_a51a0c03e82a49c8df1aee64a078f33e7} 
+\index{circulo.cpp@{circulo.cpp}!main@{main}}
+\index{main@{main}!circulo.cpp@{circulo.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00018\ \ \ \ \ InitializeMagick(*argv);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ Image\ image(Geometry(350,\ 350),\ Color(\textcolor{stringliteral}{"{}white"{}}));}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Círculo\ preto\ externo}}
+\DoxyCodeLine{00023\ \ \ \ \ image.fillColor(\textcolor{stringliteral}{"{}black"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ image.draw(DrawableCircle(175,\ 175,\ 100,\ 100));}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Círculo\ azul\ interno}}
+\DoxyCodeLine{00027\ \ \ \ \ image.fillColor(\textcolor{stringliteral}{"{}blue"{}});}
+\DoxyCodeLine{00028\ \ \ \ \ image.draw(DrawableCircle(175,\ 175,\ 200,\ 200));}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ image.write(\textcolor{stringliteral}{"{}circulos.png"{}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{catch}\ (exception\ \&error\_)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Caught\ exception:\ "{}}\ <<\ error\_.what()\ <<\ endl;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}

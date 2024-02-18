@@ -1,0 +1,79 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Esse arquivo realiza 3 testes unitários com o auxílio do Framework Google Test para verificar a leitura correta de modelos OBJ a partir da classe \doxylink{_o_b_j_model_8h}{OBJModel.\+h}.  
+
+
+{\ttfamily \#include "{}OBJModel.\+h"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp_ad0897a3084aca7e7876a9bfe30142629}{TEST}} (OBJModel\+Test, Load\+File)
+\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esse arquivo realiza 3 testes unitários com o auxílio do Framework Google Test para verificar a leitura correta de modelos OBJ a partir da classe \doxylink{_o_b_j_model_8h}{OBJModel.\+h}. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Daniel da Silva Pereira 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ ::testing::InitGoogleTest(\&argc,\ argv);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ RUN\_ALL\_TESTS();}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_ad0897a3084aca7e7876a9bfe30142629}\label{main_8cpp_ad0897a3084aca7e7876a9bfe30142629} 
+\index{main.cpp@{main.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{OBJModel\+Test}]{,  }\item[{Load\+File}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Teste\ com\ um\ arquivo\ OBJ\ 1.}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_b_j_model}{OBJModel}}\ model;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ EXPECT\_TRUE(model.\mbox{\hyperlink{class_o_b_j_model_a6de7be9aed753c385a51764a5a58e9eb}{load}}(\textcolor{stringliteral}{"{}bugatti.obj"{}}));}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ EXPECT\_FALSE(model.\mbox{\hyperlink{class_o_b_j_model_aab82244ccb99b618607c7199a64b8fc5}{vertices}}.empty());}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ EXPECT\_FALSE(model.\mbox{\hyperlink{class_o_b_j_model_ad9b6255da839f9130191fc3137ad2295}{faces}}.empty());}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Teste\ com\ um\ arquivo\ OBJ\ 2.}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_b_j_model}{OBJModel}}\ model;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ EXPECT\_TRUE(model.\mbox{\hyperlink{class_o_b_j_model_a6de7be9aed753c385a51764a5a58e9eb}{load}}(\textcolor{stringliteral}{"{}IronMan.obj"{}}));}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ EXPECT\_FALSE(model.\mbox{\hyperlink{class_o_b_j_model_aab82244ccb99b618607c7199a64b8fc5}{vertices}}.empty());}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ EXPECT\_FALSE(model.\mbox{\hyperlink{class_o_b_j_model_ad9b6255da839f9130191fc3137ad2295}{faces}}.empty());}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Teste\ com\ um\ arquivo\ OBJ\ 3.}}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_b_j_model}{OBJModel}}\ model;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ EXPECT\_TRUE(model.\mbox{\hyperlink{class_o_b_j_model_a6de7be9aed753c385a51764a5a58e9eb}{load}}(\textcolor{stringliteral}{"{}desktop.obj"{}}));}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ EXPECT\_FALSE(model.\mbox{\hyperlink{class_o_b_j_model_aab82244ccb99b618607c7199a64b8fc5}{vertices}}.empty());}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ EXPECT\_FALSE(model.\mbox{\hyperlink{class_o_b_j_model_ad9b6255da839f9130191fc3137ad2295}{faces}}.empty());}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

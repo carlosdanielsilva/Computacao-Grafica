@@ -1,0 +1,234 @@
+\doxysection{vec4 Class Reference}
+\hypertarget{classvec4}{}\label{classvec4}\index{vec4@{vec4}}
+
+
+{\ttfamily \#include $<$vec4.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}{vec4}} ()
+\item 
+\mbox{\hyperlink{classvec4_aab75403b358eade4f3fd059819858b96}{vec4}} (double e0, double e1, double e2, double e3)
+\item 
+double \mbox{\hyperlink{classvec4_a25d847358270626b627d4a61923f3cbe}{x}} () const
+\item 
+double \mbox{\hyperlink{classvec4_adce71e1986b04f4245efcf6e3e84ef59}{y}} () const
+\item 
+double \mbox{\hyperlink{classvec4_af155ae027f00d8ac0663d0fe10fe5dd8}{z}} () const
+\item 
+double \mbox{\hyperlink{classvec4_a143f8f4b5ef372195a2eb20b91958cf4}{w}} () const
+\item 
+\mbox{\hyperlink{classvec4}{vec4}} \mbox{\hyperlink{classvec4_ad70d259308c10779ca37fa100084e33b}{operator-\/}} () const
+\item 
+double \mbox{\hyperlink{classvec4_acacb6da88d4a0c92d585ee7c61658acf}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\item 
+double \& \mbox{\hyperlink{classvec4_afc5b954c340a9f40be2f181dcc7f07cc}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+\mbox{\hyperlink{classvec4}{vec4}} \& \mbox{\hyperlink{classvec4_a16d10f2ed44304fb1309f959f245ca52}{operator+=}} (const \mbox{\hyperlink{classvec4}{vec4}} \&v)
+\item 
+\mbox{\hyperlink{classvec4}{vec4}} \& \mbox{\hyperlink{classvec4_aa94397f407157c06f6d82e4667b2b169}{operator\texorpdfstring{$\ast$}{*}=}} (double t)
+\item 
+\mbox{\hyperlink{classvec4}{vec4}} \& \mbox{\hyperlink{classvec4_a14bd8aee70c80e5ca0bc019a4e86c797}{operator/=}} (double t)
+\item 
+double \mbox{\hyperlink{classvec4_a55e485d22f9ee137f383304b962489b1}{length}} () const
+\item 
+double \mbox{\hyperlink{classvec4_a73437e8e0ec221f1d6587f871848320d}{length\+\_\+squared}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}\label{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f} 
+\index{vec4@{vec4}!vec4@{vec4}}
+\index{vec4@{vec4}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{vec4()}{vec4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vec4\+::vec4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ :\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}\{0,\ 0,\ 0,\ 0\}\ \{\};}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_aab75403b358eade4f3fd059819858b96}\label{classvec4_aab75403b358eade4f3fd059819858b96} 
+\index{vec4@{vec4}!vec4@{vec4}}
+\index{vec4@{vec4}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{vec4()}{vec4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vec4\+::vec4 (\begin{DoxyParamCaption}\item[{double}]{e0,  }\item[{double}]{e1,  }\item[{double}]{e2,  }\item[{double}]{e3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ :\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}\{e0,\ e1,\ e2,\ e3\}\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvec4_a55e485d22f9ee137f383304b962489b1}\label{classvec4_a55e485d22f9ee137f383304b962489b1} 
+\index{vec4@{vec4}!length@{length}}
+\index{length@{length}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily double vec4\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sqrt(\mbox{\hyperlink{classvec4_a73437e8e0ec221f1d6587f871848320d}{length\_squared}}());}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_a73437e8e0ec221f1d6587f871848320d}\label{classvec4_a73437e8e0ec221f1d6587f871848320d} 
+\index{vec4@{vec4}!length\_squared@{length\_squared}}
+\index{length\_squared@{length\_squared}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{length\_squared()}{length\_squared()}}
+{\footnotesize\ttfamily double vec4\+::length\+\_\+squared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ +\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ +\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ +\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ *\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_aa94397f407157c06f6d82e4667b2b169}\label{classvec4_aa94397f407157c06f6d82e4667b2b169} 
+\index{vec4@{vec4}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec4}{vec4}} \& vec4\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ *=\ t;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ *=\ t;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ *=\ t;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ *=\ t;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_a16d10f2ed44304fb1309f959f245ca52}\label{classvec4_a16d10f2ed44304fb1309f959f245ca52} 
+\index{vec4@{vec4}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec4}{vec4}} \& vec4\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvec4}{vec4}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]\ +=\ v.\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_ad70d259308c10779ca37fa100084e33b}\label{classvec4_ad70d259308c10779ca37fa100084e33b} 
+\index{vec4@{vec4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec4}{vec4}} vec4\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}{vec4}}(-\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0],\ -\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1],\ -\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2],\ -\/\mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3]);\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_a14bd8aee70c80e5ca0bc019a4e86c797}\label{classvec4_a14bd8aee70c80e5ca0bc019a4e86c797} 
+\index{vec4@{vec4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec4}{vec4}} \& vec4\+::operator/= (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this}\ *=\ 1\ /\ t;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_afc5b954c340a9f40be2f181dcc7f07cc}\label{classvec4_afc5b954c340a9f40be2f181dcc7f07cc} 
+\index{vec4@{vec4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double \& vec4\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[i];\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_acacb6da88d4a0c92d585ee7c61658acf}\label{classvec4_acacb6da88d4a0c92d585ee7c61658acf} 
+\index{vec4@{vec4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double vec4\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[i];\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_a143f8f4b5ef372195a2eb20b91958cf4}\label{classvec4_a143f8f4b5ef372195a2eb20b91958cf4} 
+\index{vec4@{vec4}!w@{w}}
+\index{w@{w}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{w()}{w()}}
+{\footnotesize\ttfamily double vec4\+::w (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[3];\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_a25d847358270626b627d4a61923f3cbe}\label{classvec4_a25d847358270626b627d4a61923f3cbe} 
+\index{vec4@{vec4}!x@{x}}
+\index{x@{x}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}}
+{\footnotesize\ttfamily double vec4\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[0];\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_adce71e1986b04f4245efcf6e3e84ef59}\label{classvec4_adce71e1986b04f4245efcf6e3e84ef59} 
+\index{vec4@{vec4}!y@{y}}
+\index{y@{y}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}}
+{\footnotesize\ttfamily double vec4\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[1];\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classvec4_af155ae027f00d8ac0663d0fe10fe5dd8}\label{classvec4_af155ae027f00d8ac0663d0fe10fe5dd8} 
+\index{vec4@{vec4}!z@{z}}
+\index{z@{z}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{z()}{z()}}
+{\footnotesize\ttfamily double vec4\+::z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvec4_af33f44f3aadf308d577e85b4c131cbac}{e}}[2];\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvec4_af33f44f3aadf308d577e85b4c131cbac}\label{classvec4_af33f44f3aadf308d577e85b4c131cbac} 
+\index{vec4@{vec4}!e@{e}}
+\index{e@{e}!vec4@{vec4}}
+\doxysubsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily double vec4\+::e\mbox{[}4\mbox{]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vec4_8h}{vec4.\+h}}\end{DoxyCompactItemize}
